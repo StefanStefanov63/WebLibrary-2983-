@@ -1,0 +1,31 @@
+﻿@using WebLibrary.Models.Services.ViewModelsClasses
+@model IEnumerable<BookViewModel>
+
+@using (Html.BeginForm())
+{
+    @if(Model.Any())
+    {
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>description</th>
+            <th>qunatity</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.Author)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+            </tr>
+        }
+    </table>
+    }
+    else
+    {
+    <p>No books were found!</p>
+    }
+}

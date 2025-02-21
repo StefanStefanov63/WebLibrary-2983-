@@ -1,0 +1,13 @@
+﻿@model int
+@if (Model == 1)
+{
+	<p>Book didn't have unreturned logs, so was successfully removed.</p>
+}
+else if (Model == 2)
+{
+	<p>Book has unreturned logs, so wan't removed.</p>
+}
+else if (Model == 3)
+{
+	<p>Book wasn't found.</p>
+}

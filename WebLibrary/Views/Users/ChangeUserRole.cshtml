@@ -1,0 +1,13 @@
+﻿@model int
+@if (Model == 0)
+{
+	<p>User role was successfully changed</p>
+}
+else if (Model == 1)
+{
+	<p>Both the new and old role are the same, to change role select different roles</p>
+}
+else if(Model == 2)
+{
+	<p>User wasn't found</p>
+}

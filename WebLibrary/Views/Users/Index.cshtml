@@ -1,0 +1,33 @@
+﻿<form asp-action="GetAllUsers" method="get">
+    <button type="submit">Get All Users</button>
+</form>
+<form asp-action="GetAllUsersByRole" method="get">
+    <label for="aRole">Role:</label>
+    <select id="aRole" name="aRole" required>
+        <option value="User">User</option>
+        <option value="Librarian">Librarian</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <br />
+    <button type="submit">Get All Users By Role</button>
+</form>
+<form asp-action="ChangeUserRole" method="get">
+    <label for="aUserName">UserName:</label>
+    <input type="text" id="aUserName" name="aUserName" required />
+    <br />
+    <label for="anOldRole">Old Role:</label>
+    <select id="anOldRole" name="anOldRole" required>
+        <option value="User">User</option>
+        <option value="Librarian">Librarian</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <br />
+    <label for="aNewRole">New Role:</label>
+    <select id="aNewRole" name="aNewRole" required>
+        <option value="User">User</option>
+        <option value="Librarian">Librarian</option>
+        <option value="Admin">Admin</option>
+    </select>
+    <br />
+    <button type="submit">Change User Role</button>
+</form>

@@ -1,0 +1,27 @@
+﻿@using WebLibrary.Models.Services.ViewModelsClasses
+@model IEnumerable<UserViewModel>
+
+@using (Html.BeginForm())
+{
+    @if (Model.Any())
+    {
+        <table class="table">
+            <tr>
+                <th>UserName</th>
+                <th>Role</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Role)</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No users were found!</p>
+    }
+}

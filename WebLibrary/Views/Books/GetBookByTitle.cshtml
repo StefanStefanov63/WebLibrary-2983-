@@ -1,0 +1,28 @@
+﻿@using WebLibrary.Models.Services.ViewModelsClasses
+@model BookViewModel
+
+@using (Html.BeginForm())
+{
+    @if (Model is not null)
+    {
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>description</th>
+                <th>qunatity</th>
+            </tr>
+            <tr>
+                <td>@Model.Title</td>
+                <td>@Model.Author</td>
+                <td>@Model.Description</td>
+                <td>@Model.Quantity</td>
+            </tr>
+            
+        </table>
+    }
+    else
+    {
+        <p>No book was found!</p>
+    }
+}

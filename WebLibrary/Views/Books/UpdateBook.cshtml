@@ -1,0 +1,49 @@
+﻿@model int[]
+@if (Model[0] == 0)
+{
+	<p>Book with current title wasn't found.</p>
+}
+else if (Model[0] == 1)
+{
+	@if (Model[1] == 1)
+	{
+		<p>Book was successfully renamed</p>
+	}
+	else
+	{
+		<p>New Title was empty, so Book was't renamed</p>
+	}
+	@if (Model[2] == 0)
+	{
+		<p>New Author was empty, so Author was't changed</p>
+
+	}
+	else 
+	{
+		@if (Model[2] == 1)
+		{
+			<p>The Book's Author was successfully changed, as the new Author was't found, they were registered</p>
+			
+		}
+		else if (Model[2] == 2)
+		{
+			<p>The Book's Author was successfully changed</p>
+		}
+	}
+	@if (Model[3] == 0)
+	{
+		<p>New Description was "save", so Description was't changed()</p>
+	}
+	else
+	{
+		<p>"The Book's Description was successfully changed</p>
+	}
+	@if (Model[4] == 1)
+	{
+		<p>The Book's Quantity was successfully changed</p>
+	}
+	else
+	{
+		<p>The new Quantity is below 0, so it wasn't changed</p>
+	}
+}

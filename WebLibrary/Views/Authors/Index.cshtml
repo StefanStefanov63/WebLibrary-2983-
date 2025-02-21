@@ -1,0 +1,24 @@
+﻿<form asp-action="GetAllAuthors" method="get">
+    <button type="submit">Get All Authors</button>
+</form>
+<form asp-action="RegisterNewAuthor" method="get">
+    <label for="aName">Author Name:</label>
+    <input type="text" id="aName" name="aName" required />
+    <br />
+    <button type="submit">Register Author</button>
+</form>
+<form asp-action="DeleteAuthorByName" method="get">
+    <label for="aName">Author Name:</label>
+    <input type="text" id="aName" name="aName" required />
+    <br />
+    <button type="submit">Delete Author</button>
+</form>
+<form asp-action="UpdateAuthorName" method="get">
+    <label for="aOldName">Old Author Name:</label>
+    <input type="text" id="aOldName" name="aOldName" required />
+    <br />
+    <label for="aNewName">New Author Name:</label>
+    <input type="text" id="aNewName" name="aNewName" required />
+    <br />
+    <button type="submit">Update Author Name</button>
+</form>

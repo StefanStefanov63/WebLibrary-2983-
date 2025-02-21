@@ -1,0 +1,13 @@
+﻿@model int
+@if (Model == 1)
+{
+	<p>Author has registered book/s, so wasn't removed</p>
+}
+else if (Model == 2)
+{
+	<p>Author doesn't have registered book/s, so was removed</p>
+}
+else if (Model == 3)
+{
+	<p>Author wasn't found</p>
+}

@@ -1,0 +1,19 @@
+﻿@model int[]
+@if (Model[0] == 4)
+{
+<p>Book by the same title is already registered</p>
+}
+else if (Model[0] == 1)
+{
+	@if (Model[1] == 2)
+	{
+		<p>The entered Book Quantityis below above 0, so it was registered as 0</p>
+	}
+	@if (Model[2] == 3)
+	{
+		<p>Author wasn't found, so was registered</p>
+	}
+	<p>Book was successfully registered</p>
+}
+
+

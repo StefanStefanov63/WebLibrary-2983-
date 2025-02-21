@@ -1,0 +1,57 @@
+﻿<form asp-action="GetAllBooks" method="get">
+    <button type="submit">Get All Books</button>
+</form>
+<form asp-action="GetAllBooksFromAuthor" method="get">
+    <label for="anAuthor">Author:</label>
+    <input type="text" id="anAuthor" name="anAuthor" required />
+    <br />
+    <button type="submit">Get All Books From Author</button>
+</form>
+<form asp-action="GetBookByTitle" method="get">
+    <label for="aTitle">Title:</label>
+    <input type="text" id="aTitle" name="aTitle" required />
+    <br />
+    <button type="submit">Get Book By Title</button>
+</form>
+@if (User.IsInRole("Admin") || User.IsInRole("Librarian"))
+{
+    <form asp-action="RegisterNewBook" method="get">
+        <label for="aTitle">Book Title:</label>
+        <input type="text" id="aTitle" name="aTitle" required />
+        <br />
+        <label for="anAuthor">Author Name:</label>
+        <input type="text" id="anAuthor" name="anAuthor" required />
+        <br />
+        <label for="aDescription">Description:</label>
+        <input type="text" id="aDescription" name="aDescription" />
+        <br />
+        <label for="aQuantity">Quantity:</label>
+        <input type="number" id="aQuantity" name="aQuantity" required />
+        <br />
+        <button type="submit">Register Book</button>
+    </form>
+    <form asp-action="DeleteBookByTitle" method="get">
+        <label for="aTitle">Book Title:</label>
+        <input type="text" id="aTitle" name="aTitle" required />
+        <br />
+        <button type="submit">Delete Book</button>
+    </form>
+    <form asp-action="UpdateBook" method="get">
+        <label for="aCurrentTitle">Current Book Title:</label>
+        <input type="text" id="aCurrentTitle" name="aCurrentTitle" required />
+        <br />
+        <label for="aNewTitle">New Book Title(empty to remain unchanged):</label>
+        <input type="text" id="aNewTitle" name="aNewTitle" />
+        <br />
+        <label for="anAuthor">New Author Name(empty to remain unchanged):</label>
+        <input type="text" id="anAuthor" name="anAuthor" />
+        <br />
+        <label for="aDescription">New Description("save" to remain unchanged):</label>
+        <input type="text" id="aDescription" name="aDescription" />
+        <br />
+        <label for="aQuantity">New Quantity(below 0 to remain unchanged):</label>
+        <input type="number" id="aQuantity" name="aQuantity" />
+        <br />
+        <button type="submit">Update Book</button>
+    </form>
+}
