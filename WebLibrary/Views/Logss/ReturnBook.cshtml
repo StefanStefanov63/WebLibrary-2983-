@@ -1,0 +1,21 @@
+﻿@model int
+@if(Model == 1)
+{
+	<p>Both Book and User weren't found</p>
+}
+else if (Model == 2)
+{
+	<p>Book wasn't found</p>
+}
+else if (Model == 3)
+{
+	<p>User wasn't found</p>
+}
+else if (Model == 4)
+{
+	<p>An unreturned log of this Book and taken by User wasn't found</p>
+}
+else if (Model == 5)
+{
+	<p>Book has been returned</p>
+}

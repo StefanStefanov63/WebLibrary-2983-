@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace LibraryWebApplication.Controllers
 {
     [Authorize]
-    [Route("Logs")]
-    public class LogsController : Controller
+    [Route("Logss")]
+    public class LogssController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly LogServices logServices;
 
-        public LogsController(ApplicationDbContext context)
+        public LogssController(ApplicationDbContext context)
         {
             _context = context;
             this.logServices = new LogServices(_context);

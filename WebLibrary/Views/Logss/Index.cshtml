@@ -1,0 +1,39 @@
+﻿<form asp-action="GetMyLogs" method="get">
+    <button type="submit">Get My Logs</button>
+</form>
+@if (User.IsInRole("Admin") || User.IsInRole("Librarian"))
+{
+    <form asp-action="GetAllLogs" method="get">
+        <button type="submit">Get All Logs</button>
+    </form>
+    <form asp-action="GetAllLogsByUserName" method="get">
+        <label for="anUserName">UserName:</label>
+        <input type="text" id="anUserName" name="anUserName" required />
+        <br />
+        <button type="submit">Get All Logs By UserName</button>
+    </form>
+    <form asp-action="GetAllLogsByBookTitle" method="get">
+        <label for="aTitle">Title:</label>
+        <input type="text" id="aTitle" name="aTitle" required />
+        <br />
+        <button type="submit">Get All Logs By Book Title</button>
+    </form>
+    <form asp-action="ReturnBook" method="get">
+        <label for="aBookTitle">Book Title:</label>
+        <input type="text" id="aBookTitle" name="aBookTitle" required />
+        <br />
+        <label for="aUserName">User Name:</label>
+        <input type="text" id="aUserName" name="aUserName" required />
+        <br />
+        <button type="submit">Return Book</button>
+    </form>
+    <form asp-action="TakeBook" method="get">
+        <label for="aBookTitle">Book Title:</label>
+        <input type="text" id="aBookTitle" name="aBookTitle" required />
+        <br />
+        <label for="aUserName">User Name:</label>
+        <input type="text" id="aUserName" name="aUserName" required />
+        <br />
+        <button type="submit">Take Book</button>
+    </form>
+}

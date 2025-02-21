@@ -31,7 +31,7 @@
                         @if (User.IsInRole("Admin") || User.IsInRole("Librarian") || User.IsInRole("User"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Logs" asp-action="Index">Logs</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Logss" asp-action="Index">Logs</a>
                             </li>
                         }
                         @if (User.IsInRole("Admin") || User.IsInRole("Librarian"))

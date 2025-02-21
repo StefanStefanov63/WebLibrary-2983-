@@ -1,0 +1,36 @@
+﻿@using WebLibrary.Models.Services.ViewModelsClasses
+@model IEnumerable<LogViewModel>
+
+@using (Html.BeginForm())
+{
+    @if (Model.Any())
+    {
+        <table class="table">
+            <tr>
+                <th>Book Title</th>
+                <th>Returned</th>
+                <th>Taken by</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.BookTitle)</td>
+                    @if(item.IsReturned)
+                    {
+                        <td>Yes</td>
+                    }
+                    else
+                    {
+                        <td>No</td>
+                    }
+                    <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No Logs were found!</p>
+    }
+}
